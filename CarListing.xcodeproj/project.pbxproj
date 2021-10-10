@@ -100,6 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				2C605EF32712AEA2001F028A /* Base */,
+				2C605EF52712B2E8001F028A /* Features */,
+				2C605EF72712B2FB001F028A /* Networking */,
+				2C605EF62712B2EE001F028A /* Extensions */,
+				2C605EF42712B2E1001F028A /* Common */,
 				2C605EBE2712A817001F028A /* AppDelegate.swift */,
 				2C605EC02712A817001F028A /* SceneDelegate.swift */,
 				2C605EC22712A817001F028A /* ViewController.swift */,
@@ -134,6 +138,34 @@
 			children = (
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		2C605EF42712B2E1001F028A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2C605EF52712B2E8001F028A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		2C605EF62712B2EE001F028A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2C605EF72712B2FB001F028A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
