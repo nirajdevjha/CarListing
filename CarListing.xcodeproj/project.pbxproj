@@ -24,6 +24,9 @@
 		2C605F0B2712BB48001F028A /* JSONKeySnakeCaseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F0A2712BB48001F028A /* JSONKeySnakeCaseDecoder.swift */; };
 		2C605F0D2712BB54001F028A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F0C2712BB54001F028A /* APIError.swift */; };
 		2C605F0F2712BB64001F028A /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F0E2712BB64001F028A /* APIEndPoint.swift */; };
+		2C605F122712C463001F028A /* CarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F112712C463001F028A /* CarService.swift */; };
+		2C605F142712C485001F028A /* CarRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F132712C485001F028A /* CarRequest.swift */; };
+		2C605F162712C498001F028A /* CarResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F152712C498001F028A /* CarResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		2C605F0A2712BB48001F028A /* JSONKeySnakeCaseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONKeySnakeCaseDecoder.swift; sourceTree = "<group>"; };
 		2C605F0C2712BB54001F028A /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		2C605F0E2712BB64001F028A /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
+		2C605F112712C463001F028A /* CarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarService.swift; sourceTree = "<group>"; };
+		2C605F132712C485001F028A /* CarRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRequest.swift; sourceTree = "<group>"; };
+		2C605F152712C498001F028A /* CarResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 			children = (
 				2C605EF32712AEA2001F028A /* Base */,
 				2C605EF52712B2E8001F028A /* Features */,
+				2C605F102712C258001F028A /* Service */,
 				2C605EF72712B2FB001F028A /* Networking */,
 				2C605EF62712B2EE001F028A /* Extensions */,
 				2C605EF42712B2E1001F028A /* Common */,
@@ -193,6 +200,16 @@
 				2C605F0E2712BB64001F028A /* APIEndPoint.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		2C605F102712C258001F028A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2C605F152712C498001F028A /* CarResponseModel.swift */,
+				2C605F132712C485001F028A /* CarRequest.swift */,
+				2C605F112712C463001F028A /* CarService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,11 +343,14 @@
 			files = (
 				2C605F0B2712BB48001F028A /* JSONKeySnakeCaseDecoder.swift in Sources */,
 				2C605F072712BB2F001F028A /* NetworkManager.swift in Sources */,
+				2C605F122712C463001F028A /* CarService.swift in Sources */,
 				2C605EFF2712B43D001F028A /* Dependencies.swift in Sources */,
 				2C605EFB2712B426001F028A /* Wireframe.swift in Sources */,
 				2C605F032712B6EC001F028A /* UIColor+Extensions.swift in Sources */,
 				2C605F0F2712BB64001F028A /* APIEndPoint.swift in Sources */,
+				2C605F162712C498001F028A /* CarResponseModel.swift in Sources */,
 				2C605F0D2712BB54001F028A /* APIError.swift in Sources */,
+				2C605F142712C485001F028A /* CarRequest.swift in Sources */,
 				2C605EF92712B417001F028A /* Module.swift in Sources */,
 				2C605F052712B8B5001F028A /* Reachability.swift in Sources */,
 				2C605EBF2712A817001F028A /* AppDelegate.swift in Sources */,

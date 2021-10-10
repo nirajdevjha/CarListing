@@ -8,7 +8,6 @@
 import Foundation
 
 enum APIEndPoint {
-
     case cars
     
     var scheme: String {
