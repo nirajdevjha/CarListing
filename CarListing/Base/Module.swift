@@ -13,6 +13,6 @@ protocol ModuleLaunchable {
 }
 
 enum Module {
-    case map
-    case listing
+    case carMapList
+    case carList(carList: CarList)
 }
