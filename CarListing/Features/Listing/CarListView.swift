@@ -18,6 +18,7 @@ class CarListView: UIViewController {
         tableView.estimatedRowHeight = 80
         tableView.separatorStyle = .none
         tableView.register(CarListTableCell.self, forCellReuseIdentifier: CarListTableCell.reuseIdentifier)
+        tableView.register(SeparatorTableCell.self, forCellReuseIdentifier: SeparatorTableCell.reuseIdentifier)
         return tableView
     }()
 
@@ -65,7 +66,12 @@ extension CarListView: UITableViewDelegate, UITableViewDataSource {
                 cell.configure(from: cellViewModel)
                 return cell
             }
-            return UITableViewCell()
+        case .separator:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: SeparatorTableCell.reuseIdentifier, for: indexPath) as? SeparatorTableCell, let cellViewModel = cellViewModel as? SeparatorCellViewModel {
+                cell.configure(from: cellViewModel)
+                return cell
+            }
         }
+        return UITableViewCell()
     }
 }

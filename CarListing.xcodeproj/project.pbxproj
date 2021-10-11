@@ -39,6 +39,7 @@
 		2C605F2D27131B6C001F028A /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F2C27131B6C001F028A /* BaseTableCell.swift */; };
 		2C605F2F2713F329001F028A /* CarCellViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F2E2713F329001F028A /* CarCellViewModels.swift */; };
 		2C605F312713F696001F028A /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F302713F696001F028A /* Collection+Extensions.swift */; };
+		2C829E132714980700FCCC35 /* SeparatorTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E122714980700FCCC35 /* SeparatorTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		2C605F2C27131B6C001F028A /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		2C605F2E2713F329001F028A /* CarCellViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCellViewModels.swift; sourceTree = "<group>"; };
 		2C605F302713F696001F028A /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		2C829E122714980700FCCC35 /* SeparatorTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				2C605F2A27131B59001F028A /* CarListTableCell.swift */,
+				2C829E122714980700FCCC35 /* SeparatorTableCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				2C605F122712C463001F028A /* CarService.swift in Sources */,
 				2C605EFF2712B43D001F028A /* Dependencies.swift in Sources */,
 				2C605EFB2712B426001F028A /* Wireframe.swift in Sources */,
+				2C829E132714980700FCCC35 /* SeparatorTableCell.swift in Sources */,
 				2C605F2927131027001F028A /* Interactor.swift in Sources */,
 				2C605F2727130F0E001F028A /* CarListProtocols.swift in Sources */,
 				2C605F032712B6EC001F028A /* UIColor+Extensions.swift in Sources */,

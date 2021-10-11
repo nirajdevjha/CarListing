@@ -5,7 +5,7 @@
 //  Created by Niraj Kumar Jha on 11/10/21.
 //
 
-import Foundation
+import UIKit
 
 protocol CarInfoCellVMRepresentable {
     var rowType: CarInfoRowType { get }
@@ -13,6 +13,7 @@ protocol CarInfoCellVMRepresentable {
 
 enum CarInfoRowType {
     case info
+    case separator
 }
 
 struct CarInfoCellViewModel: CarInfoCellVMRepresentable {
@@ -21,4 +22,9 @@ struct CarInfoCellViewModel: CarInfoCellVMRepresentable {
     let nameMake: String
     let licensePlate: String
     let fuelText: String
+}
+
+struct SeparatorCellViewModel: CarInfoCellVMRepresentable {
+    let rowType: CarInfoRowType
+    let separatorColor: UIColor
 }

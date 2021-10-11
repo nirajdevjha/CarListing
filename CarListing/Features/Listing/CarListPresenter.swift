@@ -5,7 +5,7 @@
 //  Created by Niraj Kumar Jha on 10/10/21.
 //
 
-import Foundation
+import UIKit
 
 class CarListPresenter {
 
@@ -28,11 +28,15 @@ class CarListPresenter {
     private func initializeWeatherDetailsViewModels() {
         carCellViewModels.removeAll()
         let carList = interactor.getCarList()
-        for car in carList {
+        for (idx, car) in carList.enumerated() {
             let nameMakeText = "\(car.name) | \(car.make)"
             let fuelText = "Fuel: \(car.fuelLevel * 100) %"
             let carCellViewModel = CarInfoCellViewModel(rowType: .info, carImage: car.carImageUrl, nameMake: nameMakeText, licensePlate: car.licensePlate, fuelText: fuelText)
             carCellViewModels.append(carCellViewModel)
+            if idx != carList.count - 1 {
+                let separatorCellModel = SeparatorCellViewModel(rowType: .separator, separatorColor: UIColor.separatorColor)
+                carCellViewModels.append(separatorCellModel)
+            }
         }
     }
 }

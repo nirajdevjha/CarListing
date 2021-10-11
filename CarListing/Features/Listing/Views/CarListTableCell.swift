@@ -12,6 +12,7 @@ final class CarListTableCell: BaseTableCell {
     private lazy var carImageView: UIImageView = {
         let imageView = UIImageView().disableAutoResize()
         imageView.contentMode = .scaleAspectFill
+        imageView.backgroundColor = .orange
         return imageView
     }()
 
@@ -27,21 +28,21 @@ final class CarListTableCell: BaseTableCell {
     private let nameMakeLabel: UILabel = {
         let label = UILabel(frame: .zero).disableAutoResize()
         label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.textColor = UIColor.gray
+        label.textColor = UIColor.darkGrayTxtColor
         return label
     }()
 
     private let licensePlateLabel: UILabel = {
         let label = UILabel(frame: .zero).disableAutoResize()
         label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = UIColor.gray
+        label.textColor = UIColor.darkGrayTxtColor
         return label
     }()
 
     private let fuelLabel: UILabel = {
         let label = UILabel(frame: .zero).disableAutoResize()
-        label.font = UIFont.boldSystemFont(ofSize: 14)
-        label.textColor = UIColor.gray
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = UIColor.darkGrayTxtColor
         return label
     }()
 
@@ -70,7 +71,7 @@ final class CarListTableCell: BaseTableCell {
             carImageView.centerYAnchor.constraint(equalTo: carInfoStackView.centerYAnchor),
 
             carInfoStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            carInfoStackView.leadingAnchor.constraint(equalTo: carImageView.leadingAnchor, constant: 10),
+            carInfoStackView.leadingAnchor.constraint(equalTo: carImageView.trailingAnchor, constant: 10),
             carInfoStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             carInfoStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
         ])
@@ -79,7 +80,9 @@ final class CarListTableCell: BaseTableCell {
 
 extension CarListTableCell {
     func configure(from model: CarInfoCellViewModel) {
-        //TODO
+        nameMakeLabel.text = model.nameMake
+        licensePlateLabel.text = model.licensePlate
+        fuelLabel.text = model.fuelText
     }
 }
 
