@@ -27,7 +27,7 @@
 		2C605F122712C463001F028A /* CarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F112712C463001F028A /* CarService.swift */; };
 		2C605F142712C485001F028A /* CarRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F132712C485001F028A /* CarRequest.swift */; };
 		2C605F162712C498001F028A /* CarResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F152712C498001F028A /* CarResponseModel.swift */; };
-		2C605F1B27130A01001F028A /* CarListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F1A27130A01001F028A /* CarListView.swift */; };
+		2C605F1B27130A01001F028A /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F1A27130A01001F028A /* CarListViewController.swift */; };
 		2C605F1D27130A18001F028A /* CarListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F1C27130A18001F028A /* CarListModule.swift */; };
 		2C605F1F27130A32001F028A /* CarListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F1E27130A32001F028A /* CarListPresenter.swift */; };
 		2C605F2127130A41001F028A /* CarListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F2027130A41001F028A /* CarListInteractor.swift */; };
@@ -40,6 +40,12 @@
 		2C605F2F2713F329001F028A /* CarCellViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F2E2713F329001F028A /* CarCellViewModels.swift */; };
 		2C605F312713F696001F028A /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605F302713F696001F028A /* Collection+Extensions.swift */; };
 		2C829E132714980700FCCC35 /* SeparatorTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E122714980700FCCC35 /* SeparatorTableCell.swift */; };
+		2C829E172714A95E00FCCC35 /* MapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E162714A95E00FCCC35 /* MapListViewController.swift */; };
+		2C829E192714A96D00FCCC35 /* MapListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E182714A96D00FCCC35 /* MapListPresenter.swift */; };
+		2C829E1B2714A97A00FCCC35 /* MapListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E1A2714A97A00FCCC35 /* MapListInteractor.swift */; };
+		2C829E1D2714A98800FCCC35 /* MapListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E1C2714A98800FCCC35 /* MapListWireframe.swift */; };
+		2C829E1F2714A9CD00FCCC35 /* MapListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E1E2714A9CD00FCCC35 /* MapListModule.swift */; };
+		2C829E212714A9E700FCCC35 /* MapListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E202714A9E700FCCC35 /* MapListProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +92,7 @@
 		2C605F112712C463001F028A /* CarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarService.swift; sourceTree = "<group>"; };
 		2C605F132712C485001F028A /* CarRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRequest.swift; sourceTree = "<group>"; };
 		2C605F152712C498001F028A /* CarResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarResponseModel.swift; sourceTree = "<group>"; };
-		2C605F1A27130A01001F028A /* CarListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListView.swift; sourceTree = "<group>"; };
+		2C605F1A27130A01001F028A /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
 		2C605F1C27130A18001F028A /* CarListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListModule.swift; sourceTree = "<group>"; };
 		2C605F1E27130A32001F028A /* CarListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresenter.swift; sourceTree = "<group>"; };
 		2C605F2027130A41001F028A /* CarListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListInteractor.swift; sourceTree = "<group>"; };
@@ -99,6 +105,12 @@
 		2C605F2E2713F329001F028A /* CarCellViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCellViewModels.swift; sourceTree = "<group>"; };
 		2C605F302713F696001F028A /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		2C829E122714980700FCCC35 /* SeparatorTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorTableCell.swift; sourceTree = "<group>"; };
+		2C829E162714A95E00FCCC35 /* MapListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListViewController.swift; sourceTree = "<group>"; };
+		2C829E182714A96D00FCCC35 /* MapListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListPresenter.swift; sourceTree = "<group>"; };
+		2C829E1A2714A97A00FCCC35 /* MapListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListInteractor.swift; sourceTree = "<group>"; };
+		2C829E1C2714A98800FCCC35 /* MapListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListWireframe.swift; sourceTree = "<group>"; };
+		2C829E1E2714A9CD00FCCC35 /* MapListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListModule.swift; sourceTree = "<group>"; };
+		2C829E202714A9E700FCCC35 /* MapListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +259,12 @@
 		2C605F172712E236001F028A /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				2C829E1E2714A9CD00FCCC35 /* MapListModule.swift */,
+				2C829E202714A9E700FCCC35 /* MapListProtocols.swift */,
+				2C829E162714A95E00FCCC35 /* MapListViewController.swift */,
+				2C829E182714A96D00FCCC35 /* MapListPresenter.swift */,
+				2C829E1A2714A97A00FCCC35 /* MapListInteractor.swift */,
+				2C829E1C2714A98800FCCC35 /* MapListWireframe.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -256,11 +274,11 @@
 			children = (
 				2C605F19271309F0001F028A /* Views */,
 				2C605F1C27130A18001F028A /* CarListModule.swift */,
-				2C605F1A27130A01001F028A /* CarListView.swift */,
+				2C605F2627130F0E001F028A /* CarListProtocols.swift */,
+				2C605F1A27130A01001F028A /* CarListViewController.swift */,
 				2C605F1E27130A32001F028A /* CarListPresenter.swift */,
 				2C605F2027130A41001F028A /* CarListInteractor.swift */,
 				2C605F2227130A5B001F028A /* CarListWireframe.swift */,
-				2C605F2627130F0E001F028A /* CarListProtocols.swift */,
 				2C605F2E2713F329001F028A /* CarCellViewModels.swift */,
 			);
 			path = Listing;
@@ -404,24 +422,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C829E172714A95E00FCCC35 /* MapListViewController.swift in Sources */,
 				2C605F0B2712BB48001F028A /* JSONKeySnakeCaseDecoder.swift in Sources */,
 				2C605F1F27130A32001F028A /* CarListPresenter.swift in Sources */,
+				2C829E192714A96D00FCCC35 /* MapListPresenter.swift in Sources */,
 				2C605F072712BB2F001F028A /* NetworkManager.swift in Sources */,
 				2C605F122712C463001F028A /* CarService.swift in Sources */,
+				2C829E1B2714A97A00FCCC35 /* MapListInteractor.swift in Sources */,
 				2C605EFF2712B43D001F028A /* Dependencies.swift in Sources */,
 				2C605EFB2712B426001F028A /* Wireframe.swift in Sources */,
 				2C829E132714980700FCCC35 /* SeparatorTableCell.swift in Sources */,
 				2C605F2927131027001F028A /* Interactor.swift in Sources */,
 				2C605F2727130F0E001F028A /* CarListProtocols.swift in Sources */,
+				2C829E1D2714A98800FCCC35 /* MapListWireframe.swift in Sources */,
 				2C605F032712B6EC001F028A /* UIColor+Extensions.swift in Sources */,
 				2C605F312713F696001F028A /* Collection+Extensions.swift in Sources */,
 				2C605F2D27131B6C001F028A /* BaseTableCell.swift in Sources */,
 				2C605F2127130A41001F028A /* CarListInteractor.swift in Sources */,
 				2C605F1D27130A18001F028A /* CarListModule.swift in Sources */,
+				2C829E212714A9E700FCCC35 /* MapListProtocols.swift in Sources */,
 				2C605F0F2712BB64001F028A /* APIEndPoint.swift in Sources */,
 				2C605F2527130E49001F028A /* UIView+Extensions.swift in Sources */,
 				2C605F162712C498001F028A /* CarResponseModel.swift in Sources */,
 				2C605F0D2712BB54001F028A /* APIError.swift in Sources */,
+				2C829E1F2714A9CD00FCCC35 /* MapListModule.swift in Sources */,
 				2C605F2B27131B59001F028A /* CarListTableCell.swift in Sources */,
 				2C605F142712C485001F028A /* CarRequest.swift in Sources */,
 				2C605EF92712B417001F028A /* Module.swift in Sources */,
@@ -431,7 +455,7 @@
 				2C605F092712BB3B001F028A /* NetworkingProtocols.swift in Sources */,
 				2C605EFD2712B432001F028A /* Router.swift in Sources */,
 				2C605F2327130A5B001F028A /* CarListWireframe.swift in Sources */,
-				2C605F1B27130A01001F028A /* CarListView.swift in Sources */,
+				2C605F1B27130A01001F028A /* CarListViewController.swift in Sources */,
 				2C605EC12712A817001F028A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

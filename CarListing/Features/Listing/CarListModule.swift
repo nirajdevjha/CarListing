@@ -16,7 +16,7 @@ final class CarListModule: ModuleLaunchable {
         router: RouterType,
         carList: CarList) throws {
 
-        let controller = CarListView()
+        let controller = CarListViewController()
 
         let interactor: CarListInteractorProtocol = CarListInteractor(carList: carList)
         let wireframe: CarListWireframeProtocol = CarListWireframe(

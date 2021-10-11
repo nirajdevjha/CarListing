@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CarListView: UIViewController {
+class CarListViewController: UIViewController {
     var presenter: CarListPresenterProtocol?
 
     private lazy var tableView: UITableView = {
@@ -41,7 +41,7 @@ class CarListView: UIViewController {
     }
 }
 
-extension CarListView: CarListViewProtocol {
+extension CarListViewController: CarListViewProtocol {
 
     func reloadTableView() {
         DispatchQueue.main.async {
@@ -51,7 +51,7 @@ extension CarListView: CarListViewProtocol {
 }
 
 //MARK:- Table view delegate / datasource
-extension CarListView: UITableViewDelegate, UITableViewDataSource {
+extension CarListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter?.numberOfRows(in: section) ?? 0
     }

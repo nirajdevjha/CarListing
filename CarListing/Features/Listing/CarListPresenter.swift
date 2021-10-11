@@ -25,7 +25,7 @@ class CarListPresenter {
         self.wireframe = wireframe
     }
 
-    private func initializeWeatherDetailsViewModels() {
+    private func initializeCarCellViewModels() {
         carCellViewModels.removeAll()
         let carList = interactor.getCarList()
         for (idx, car) in carList.enumerated() {
@@ -43,7 +43,7 @@ class CarListPresenter {
 
 extension CarListPresenter: CarListPresenterProtocol {
     func viewDidLoad() {
-        initializeWeatherDetailsViewModels()
+        initializeCarCellViewModels()
         view?.reloadTableView()
     }
 
