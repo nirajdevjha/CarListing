@@ -17,6 +17,7 @@ class CarListView: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 80
         tableView.separatorStyle = .none
+        tableView.register(CarListTableCell.self, forCellReuseIdentifier: CarListTableCell.reuseIdentifier)
         return tableView
     }()
 
@@ -51,11 +52,20 @@ extension CarListView: CarListViewProtocol {
 //MARK:- Table view delegate / datasource
 extension CarListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return 0
+        return presenter?.numberOfRows(in: section) ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cellViewModel = presenter?.getCellViewModel(for: indexPath.row) else {
+            return UITableViewCell()
+        }
+        switch cellViewModel.rowType {
+        case .info:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: CarListTableCell.reuseIdentifier, for: indexPath) as? CarListTableCell, let cellViewModel = cellViewModel as? CarInfoCellViewModel {
+                cell.configure(from: cellViewModel)
+                return cell
+            }
+            return UITableViewCell()
+        }
     }
 }
-

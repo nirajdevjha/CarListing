@@ -9,12 +9,16 @@ import UIKit
 
 protocol CarListPresenterProtocol: AnyObject {
     func viewDidLoad()
+    func getCellViewModel(for index: Int) -> CarInfoCellVMRepresentable?
+    func numberOfRows(in section: Int) -> Int
 }
 
 protocol CarListViewProtocol where Self: UIViewController {
     func reloadTableView()
 }
 
-protocol CarListInteractorProtocol: AnyObject { }
+protocol CarListInteractorProtocol: AnyObject {
+   func getCarList() -> CarList
+}
 
 protocol CarListWireframeProtocol: WireframeType { }

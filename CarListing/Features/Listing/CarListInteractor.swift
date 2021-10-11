@@ -8,5 +8,13 @@
 import Foundation
 
 class CarListInteractor: CarListInteractorProtocol {
-    init() { }
+    let carList: CarList
+
+    init(carList: CarList) {
+        self.carList = carList
+    }
+
+    func getCarList() -> CarList {
+        return carList
+    }
 }
