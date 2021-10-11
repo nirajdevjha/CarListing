@@ -24,11 +24,10 @@ final class Router: RouterType {
     func launchable(for module: Module) -> ModuleLaunchable? {
         switch module {
         case .carMapList:
-            break
+            return try? MapListModule(depedencies: dependencies, router: self)
         case .carList(let carList):
             return try? CarListModule(depedencies: dependencies, router: self, carList: carList)
         }
-        return nil
     }
 
     func setRootViewController(
