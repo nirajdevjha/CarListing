@@ -11,6 +11,7 @@ protocol CarListPresenterProtocol: AnyObject {
     func viewDidLoad()
     func getCellViewModel(for index: Int) -> CarInfoCellVMRepresentable?
     func numberOfRows(in section: Int) -> Int
+    func dismissCarListVC()
 }
 
 protocol CarListViewProtocol where Self: UIViewController {

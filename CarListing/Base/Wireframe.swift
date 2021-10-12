@@ -23,10 +23,13 @@ protocol WireframeType {
     )
 
     func present(
-        _ viewController: UIViewController,
-        on navigationController: UINavigationController,
+        sourceView: UIViewController?,
+        viewController: UIViewController,
+        on navigationController: UINavigationController?,
         animated: Bool
     )
+
+    func dismiss(viewController: UIViewController, animated: Bool)
 }
 
 extension WireframeType {
@@ -47,11 +50,20 @@ extension WireframeType {
     }
 
     func present(
-        _ viewController: UIViewController,
-        on navigationController: UINavigationController,
+        sourceView: UIViewController?,
+        viewController: UIViewController,
+        on navigationController: UINavigationController?,
         animated: Bool = true
     ) {
-        navigationController.present(viewController, animated: animated)
+        if let navigationController = navigationController {
+            navigationController.present(viewController, animated: animated)
+        } else {
+            let navController = UINavigationController(rootViewController: viewController)
+            sourceView?.present(navController, animated: animated)
+        }
     }
 
+    func dismiss(viewController: UIViewController, animated: Bool) {
+        viewController.dismiss(animated: animated)
+    }
 }

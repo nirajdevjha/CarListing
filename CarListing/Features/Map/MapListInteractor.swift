@@ -11,9 +11,7 @@ class MapListInteractor: MapListInteractorProtocol {
 
     let reachability: ReachabilityType
     private let service: CarServiceProvider
-
     weak var presenter: MapListInteractorOutputProtocol?
-
 
     init(reachability: ReachabilityType, service: CarServiceProvider) {
         self.reachability = reachability
@@ -27,6 +25,13 @@ class MapListInteractor: MapListInteractorProtocol {
     ///   - failure: completion for failure
     func fetchCarList(success: @escaping ((CarList) -> Void),
                       failure: @escaping ((APIError) -> Void)) {
-
+        service.fetchCarList { result in
+            switch result {
+            case .success(let carList):
+                success(carList)
+            case .failure(let error):
+                failure(error)
+            }
+        }
     }
 }

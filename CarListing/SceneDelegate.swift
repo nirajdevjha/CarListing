@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let router = Router(dependencies: Dependencies(reachability: Reachability()))
-        router.setRootViewController(module: .carList(carList: []), window: window)
+        router.setRootViewController(module: .carMapList, window: window)
         self.window = window
         window.makeKeyAndVisible()
     }

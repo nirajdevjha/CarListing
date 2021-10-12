@@ -10,6 +10,15 @@ import UIKit
 class CarListViewController: UIViewController {
     var presenter: CarListPresenterProtocol?
 
+
+    private lazy var closeButton: UIBarButtonItem = {
+        let button: UIButton = .init(type: .custom)
+        button.addTarget(self, action: #selector(didTapCloseButton), for: .touchUpInside)
+        button.setImage(UIImage(named: "close"), for: .normal)
+        let barButton = UIBarButtonItem(customView: button)
+        return barButton
+    }()
+
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero).disableAutoResize()
         tableView.delegate = self
@@ -30,6 +39,8 @@ class CarListViewController: UIViewController {
     }
 
     private func setupViews() {
+        title = "Cars"
+        navigationItem.leftBarButtonItem = closeButton
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
@@ -38,6 +49,11 @@ class CarListViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+    }
+
+    @objc
+    private func didTapCloseButton() {
+        presenter?.dismissCarListVC()
     }
 }
 

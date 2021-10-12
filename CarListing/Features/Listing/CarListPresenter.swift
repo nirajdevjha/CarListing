@@ -55,4 +55,11 @@ extension CarListPresenter: CarListPresenterProtocol {
     func numberOfRows(in section: Int) -> Int {
        return carCellViewModels.count
     }
+
+    func dismissCarListVC() {
+        guard let view = view else {
+            return
+        }
+        wireframe.dismiss(viewController: view, animated: true)
+    }
 }

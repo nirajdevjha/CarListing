@@ -11,7 +11,7 @@ import UIKit
 protocol RouterType {
     func setRootViewController(module: Module, window: UIWindow)
     func push(module: Module, in navigationController: UINavigationController, animated: Bool)
-    func present(module: Module, in navigationController: UINavigationController, animated: Bool)
+    func present(module: Module, sourceView: UIViewController?, in navigationController: UINavigationController?, animated: Bool)
 }
 
 final class Router: RouterType {
@@ -47,10 +47,10 @@ final class Router: RouterType {
         launchable.wireframe.push(launchable.viewController, on: navigationController, animated: animated)
     }
 
-    func present(module: Module, in navigationController: UINavigationController, animated: Bool) {
+    func present(module: Module, sourceView: UIViewController?, in navigationController: UINavigationController?, animated: Bool) {
         guard let launchable = launchable(for: module) else {
             return
         }
-        launchable.wireframe.present(launchable.viewController, on: navigationController, animated: animated)
+        launchable.wireframe.present(sourceView: sourceView, viewController: launchable.viewController, on: navigationController, animated: animated)
     }
 }

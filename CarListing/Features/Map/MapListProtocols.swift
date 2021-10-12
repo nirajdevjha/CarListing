@@ -9,6 +9,7 @@ import UIKit
 
 protocol MapListPresenterProtocol: AnyObject {
     func viewDidLoad()
+    func openCarListing()
 }
 
 protocol MapListViewProtocol where Self: UIViewController {
