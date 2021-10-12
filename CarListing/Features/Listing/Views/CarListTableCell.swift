@@ -85,4 +85,3 @@ extension CarListTableCell {
         fuelLabel.text = model.fuelText
     }
 }
-
