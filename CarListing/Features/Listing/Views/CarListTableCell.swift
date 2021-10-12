@@ -6,13 +6,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class CarListTableCell: BaseTableCell {
 
     private lazy var carImageView: UIImageView = {
         let imageView = UIImageView().disableAutoResize()
         imageView.contentMode = .scaleAspectFill
-        imageView.backgroundColor = .orange
         return imageView
     }()
 
@@ -83,5 +83,11 @@ extension CarListTableCell {
         nameMakeLabel.text = model.nameMake
         licensePlateLabel.text = model.licensePlate
         fuelLabel.text = model.fuelText
+        if let carImageUrlString = model.carImage,
+           let carImageUrl = URL(string: carImageUrlString) {
+            carImageView.sd_setImage(with: carImageUrl , placeholderImage: UIImage(named: "car_default"), options: .retryFailed)
+        } else {
+            carImageView.image = UIImage(named: "car_default")
+        }
     }
 }
