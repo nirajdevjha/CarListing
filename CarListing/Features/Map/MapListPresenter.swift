@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class MapListPresenter {
 
@@ -28,14 +29,28 @@ class MapListPresenter {
         interactor.fetchCarList { [weak self] carList in
             guard let self = self else { return }
             self.carList = carList
+            self.createMapMarkers()
         } failure: { [weak self] error in
             //TODO: handle error
         }
+    }
+
+    func createMapMarkers() {
+        var carAnnotations: [CarAnnotaion] = []
+        for car in carList {
+            let carAnnotation = CarAnnotaion(title: "Car", coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude))
+            carAnnotations.append(carAnnotation)
+        }
+        view?.markCarsOnMap(carLocations: carAnnotations)
     }
 }
 
 extension MapListPresenter: MapListPresenterProtocol {
     func viewDidLoad() {
+        view?.setInitialLocationOnMap(
+            initialLocation: CLLocation(latitude: 48.137154, longitude: 11.576124),
+            regionRadius: 4000
+        )
         fetchCarList()
     }
 
@@ -48,3 +63,5 @@ extension MapListPresenter: MapListPresenterProtocol {
 extension MapListPresenter: MapListInteractorOutputProtocol {
     
 }
+
+

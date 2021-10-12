@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class MapListViewController: UIViewController {
     var presenter: MapListPresenterProtocol?
@@ -18,6 +19,11 @@ class MapListViewController: UIViewController {
         return button
     }()
 
+    private let mapView: MKMapView = {
+        let mapView = MKMapView(frame: .zero).disableAutoResize()
+        return mapView
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -26,7 +32,15 @@ class MapListViewController: UIViewController {
     }
 
     private func setupViews() {
+        view.addSubview(mapView)
         view.addSubview(listingFloatingButton)
+
+        NSLayoutConstraint.activate([
+            mapView.topAnchor.constraint(equalTo: view.topAnchor),
+            mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
 
         NSLayoutConstraint.activate([
             listingFloatingButton.widthAnchor.constraint(equalToConstant: 50),
@@ -43,5 +57,13 @@ class MapListViewController: UIViewController {
 }
 
 extension MapListViewController: MapListViewProtocol {
+    func setInitialLocationOnMap(initialLocation: CLLocation, regionRadius: CLLocationDistance) {
+        mapView.setInitialLocation(with: initialLocation, regionRadius: regionRadius)
+    }
 
+    func markCarsOnMap(carLocations: [CarAnnotaion]) {
+        for carLocation in carLocations {
+            mapView.addAnnotation(carLocation)
+        }
+    }
 }

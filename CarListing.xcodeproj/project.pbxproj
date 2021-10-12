@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,6 +46,8 @@
 		2C829E1D2714A98800FCCC35 /* MapListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E1C2714A98800FCCC35 /* MapListWireframe.swift */; };
 		2C829E1F2714A9CD00FCCC35 /* MapListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E1E2714A9CD00FCCC35 /* MapListModule.swift */; };
 		2C829E212714A9E700FCCC35 /* MapListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E202714A9E700FCCC35 /* MapListProtocols.swift */; };
+		2CB9692227159BCD00BDA13F /* CarAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9692127159BCD00BDA13F /* CarAnnotaion.swift */; };
+		2CB969242715ADEF00BDA13F /* MKMapView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969232715ADEF00BDA13F /* MKMapView+Extensions.swift */; };
 		ADC0CD50E6D2CC367027BAA2 /* Pods_CarListing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D383BA3E13AAE5AFF2DC8B /* Pods_CarListing.framework */; };
 		D09F372A5926CA00CA8E60F1 /* Pods_CarListing_CarListingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5311AF7B9C5109276DDF52C8 /* Pods_CarListing_CarListingUITests.framework */; };
 		F6DC032880DB41BC6AAEDD36 /* Pods_CarListingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B473E05BD0B8B85104A52BA /* Pods_CarListingTests.framework */; };
@@ -116,6 +118,8 @@
 		2C829E1C2714A98800FCCC35 /* MapListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListWireframe.swift; sourceTree = "<group>"; };
 		2C829E1E2714A9CD00FCCC35 /* MapListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListModule.swift; sourceTree = "<group>"; };
 		2C829E202714A9E700FCCC35 /* MapListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListProtocols.swift; sourceTree = "<group>"; };
+		2CB9692127159BCD00BDA13F /* CarAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnotaion.swift; sourceTree = "<group>"; };
+		2CB969232715ADEF00BDA13F /* MKMapView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extensions.swift"; sourceTree = "<group>"; };
 		5311AF7B9C5109276DDF52C8 /* Pods_CarListing_CarListingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarListing_CarListingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1AE97462E2B9B289F52D3C /* Pods-CarListing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarListing.release.xcconfig"; path = "Target Support Files/Pods-CarListing/Pods-CarListing.release.xcconfig"; sourceTree = "<group>"; };
 		7B473E05BD0B8B85104A52BA /* Pods_CarListingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarListingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,6 +261,7 @@
 				2C605F022712B6EC001F028A /* UIColor+Extensions.swift */,
 				2C605F2427130E49001F028A /* UIView+Extensions.swift */,
 				2C605F302713F696001F028A /* Collection+Extensions.swift */,
+				2CB969232715ADEF00BDA13F /* MKMapView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				2C829E182714A96D00FCCC35 /* MapListPresenter.swift */,
 				2C829E1A2714A97A00FCCC35 /* MapListInteractor.swift */,
 				2C829E1C2714A98800FCCC35 /* MapListWireframe.swift */,
+				2CB9692127159BCD00BDA13F /* CarAnnotaion.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -330,7 +336,6 @@
 				A75F3211AD997480DCFF23E4 /* Pods-CarListingTests.debug.xcconfig */,
 				EFC6F96A06258C50EF5BA13B /* Pods-CarListingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -583,6 +588,7 @@
 				2C829E132714980700FCCC35 /* SeparatorTableCell.swift in Sources */,
 				2C605F2927131027001F028A /* Interactor.swift in Sources */,
 				2C605F2727130F0E001F028A /* CarListProtocols.swift in Sources */,
+				2CB969242715ADEF00BDA13F /* MKMapView+Extensions.swift in Sources */,
 				2C829E1D2714A98800FCCC35 /* MapListWireframe.swift in Sources */,
 				2C605F032712B6EC001F028A /* UIColor+Extensions.swift in Sources */,
 				2C605F312713F696001F028A /* Collection+Extensions.swift in Sources */,
@@ -605,6 +611,7 @@
 				2C605EFD2712B432001F028A /* Router.swift in Sources */,
 				2C605F2327130A5B001F028A /* CarListWireframe.swift in Sources */,
 				2C605F1B27130A01001F028A /* CarListViewController.swift in Sources */,
+				2CB9692227159BCD00BDA13F /* CarAnnotaion.swift in Sources */,
 				2C605EC12712A817001F028A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

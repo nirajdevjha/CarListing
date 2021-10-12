@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 protocol MapListPresenterProtocol: AnyObject {
     func viewDidLoad()
@@ -13,6 +14,8 @@ protocol MapListPresenterProtocol: AnyObject {
 }
 
 protocol MapListViewProtocol where Self: UIViewController {
+    func setInitialLocationOnMap(initialLocation: CLLocation, regionRadius: CLLocationDistance)
+    func markCarsOnMap(carLocations: [CarAnnotaion])
 }
 
 protocol MapListInteractorProtocol: AnyObject, InteractorType {
