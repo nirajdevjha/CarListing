@@ -16,7 +16,7 @@ final class CarInfoView: BaseView {
 
     private let iconImageView: UIImageView = {
         let imageView = UIImageView().disableAutoResize()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
 
