@@ -58,6 +58,7 @@
 		2C8C57FF27170F1A000B69BC /* CarListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C57FE27170F1A000B69BC /* CarListPresenterTests.swift */; };
 		2C8C5801271714FE000B69BC /* MapListModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C5800271714FE000B69BC /* MapListModuleTests.swift */; };
 		2C8C58032717150C000B69BC /* CarListModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C58022717150C000B69BC /* CarListModuleTests.swift */; };
+		2C8C580627175EE7000B69BC /* CarRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C580527175EE7000B69BC /* CarRequestTests.swift */; };
 		2CB9692227159BCD00BDA13F /* CarAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9692127159BCD00BDA13F /* CarAnnotaion.swift */; };
 		2CB969242715ADEF00BDA13F /* MKMapView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969232715ADEF00BDA13F /* MKMapView+Extensions.swift */; };
 		2CB969272715EEEF00BDA13F /* SelectedCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969262715EEEF00BDA13F /* SelectedCarView.swift */; };
@@ -143,6 +144,7 @@
 		2C8C57FE27170F1A000B69BC /* CarListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresenterTests.swift; sourceTree = "<group>"; };
 		2C8C5800271714FE000B69BC /* MapListModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListModuleTests.swift; sourceTree = "<group>"; };
 		2C8C58022717150C000B69BC /* CarListModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListModuleTests.swift; sourceTree = "<group>"; };
+		2C8C580527175EE7000B69BC /* CarRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRequestTests.swift; sourceTree = "<group>"; };
 		2CB9692127159BCD00BDA13F /* CarAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnotaion.swift; sourceTree = "<group>"; };
 		2CB969232715ADEF00BDA13F /* MKMapView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extensions.swift"; sourceTree = "<group>"; };
 		2CB969262715EEEF00BDA13F /* SelectedCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCarView.swift; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				2CB969462716E76900BDA13F /* CarServiceTests.swift */,
+				2C8C580527175EE7000B69BC /* CarRequestTests.swift */,
 			);
 			path = "Service Tests";
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				2C8C57FF27170F1A000B69BC /* CarListPresenterTests.swift in Sources */,
 				2C8C5801271714FE000B69BC /* MapListModuleTests.swift in Sources */,
 				2C8C57F727170240000B69BC /* MapListPresenterTests.swift in Sources */,
+				2C8C580627175EE7000B69BC /* CarRequestTests.swift in Sources */,
 				2C8C57F927170CD8000B69BC /* MockCarListViewController.swift in Sources */,
 				2C8C57FD27170CF7000B69BC /* MockCarListWireframe.swift in Sources */,
 				2C8C58032717150C000B69BC /* CarListModuleTests.swift in Sources */,
