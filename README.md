@@ -1,4 +1,4 @@
-# CarListing
+# Car Listing
 
 CarListing app allows user to see list of cars on map as well as in the list.
 
