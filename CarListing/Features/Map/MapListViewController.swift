@@ -11,12 +11,12 @@ import MapKit
 class MapListViewController: UIViewController {
     var presenter: MapListPresenterProtocol?
 
-    private let listingFloatingView: FloatingButtonView = {
+    private lazy var listingFloatingView: FloatingButtonView = {
         let view = FloatingButtonView().disableAutoResize()
         return view
     }()
 
-    private let mapView: MKMapView = {
+    private lazy var mapView: MKMapView = {
         let mapView = MKMapView(frame: .zero).disableAutoResize()
         return mapView
     }()

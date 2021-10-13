@@ -13,11 +13,11 @@ class MapListPresenter {
     private let interactor: MapListInteractorProtocol
     private let wireframe: MapListWireframeProtocol
     private weak var view: MapListViewProtocol?
-    private var carList: CarList = []
+    private(set) var carList: CarList = []
 
     private enum Constants {
-        static let errorMessage = "Unable to fetch the cars"
         static let noInternetMessage = "You seem to be offline"
+        static let errorMessage = "Unable to fetch the cars"
     }
 
     init(
@@ -38,7 +38,6 @@ class MapListPresenter {
             self.wireframe.showBannerView(from: view, bannerData: bannerData)
             return
         }
-
         interactor.fetchCarList { [weak self] carList in
             guard let self = self else { return }
             self.carList = carList
@@ -53,7 +52,11 @@ class MapListPresenter {
     func createMapMarkers() {
         var carAnnotations: [CarAnnotaion] = []
         for car in carList {
-            let carAnnotation = CarAnnotaion(id: car.id, title: car.name, coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude))
+            let carAnnotation = CarAnnotaion(
+                id: car.id,
+                title: car.name,
+                coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude)
+            )
             carAnnotations.append(carAnnotation)
         }
         view?.markCarsOnMap(carLocations: carAnnotations)
@@ -75,7 +78,6 @@ extension MapListPresenter: MapListPresenterProtocol {
     }
 
     func getSelectedCarData(carAnnotation: CarAnnotaion) -> SelectedCarViewData? {
-
         let selectedCar = carList.first { car in
             car.id == carAnnotation.id
         }
@@ -94,8 +96,4 @@ extension MapListPresenter: MapListPresenterProtocol {
     }
 }
 
-extension MapListPresenter: MapListInteractorOutputProtocol {
-    
-}
-
-
+extension MapListPresenter: MapListInteractorOutputProtocol { }

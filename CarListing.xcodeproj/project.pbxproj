@@ -11,8 +11,6 @@
 		2C605EC12712A817001F028A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605EC02712A817001F028A /* SceneDelegate.swift */; };
 		2C605EC82712A818001F028A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C605EC72712A818001F028A /* Assets.xcassets */; };
 		2C605ECB2712A818001F028A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C605EC92712A818001F028A /* LaunchScreen.storyboard */; };
-		2C605ED62712A818001F028A /* CarListingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605ED52712A818001F028A /* CarListingTests.swift */; };
-		2C605EE12712A818001F028A /* CarListingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605EE02712A818001F028A /* CarListingUITests.swift */; };
 		2C605EF92712B417001F028A /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605EF82712B417001F028A /* Module.swift */; };
 		2C605EFB2712B426001F028A /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605EFA2712B426001F028A /* Wireframe.swift */; };
 		2C605EFD2712B432001F028A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C605EFC2712B432001F028A /* Router.swift */; };
@@ -46,6 +44,14 @@
 		2C829E1D2714A98800FCCC35 /* MapListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E1C2714A98800FCCC35 /* MapListWireframe.swift */; };
 		2C829E1F2714A9CD00FCCC35 /* MapListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E1E2714A9CD00FCCC35 /* MapListModule.swift */; };
 		2C829E212714A9E700FCCC35 /* MapListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C829E202714A9E700FCCC35 /* MapListProtocols.swift */; };
+		2C8C57E82716F7B0000B69BC /* MockReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C57E72716F7B0000B69BC /* MockReachability.swift */; };
+		2C8C57EA2716F896000B69BC /* NetworkManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C57E92716F896000B69BC /* NetworkManagerMock.swift */; };
+		2C8C57ED2716FA3A000B69BC /* carInvalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C8C57EB2716FA3A000B69BC /* carInvalid.json */; };
+		2C8C57EE2716FA3A000B69BC /* carValid.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C8C57EC2716FA3A000B69BC /* carValid.json */; };
+		2C8C57F02716FE96000B69BC /* MockMapListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C57EF2716FE96000B69BC /* MockMapListViewController.swift */; };
+		2C8C57F22716FEAD000B69BC /* MockMapListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C57F12716FEAD000B69BC /* MockMapListInteractor.swift */; };
+		2C8C57F42716FED1000B69BC /* MockMapListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C57F32716FED1000B69BC /* MockMapListWireframe.swift */; };
+		2C8C57F727170240000B69BC /* MapListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C57F627170240000B69BC /* MapListPresenterTests.swift */; };
 		2CB9692227159BCD00BDA13F /* CarAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9692127159BCD00BDA13F /* CarAnnotaion.swift */; };
 		2CB969242715ADEF00BDA13F /* MKMapView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969232715ADEF00BDA13F /* MKMapView+Extensions.swift */; };
 		2CB969272715EEEF00BDA13F /* SelectedCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969262715EEEF00BDA13F /* SelectedCarView.swift */; };
@@ -58,20 +64,13 @@
 		2CB969382716D95C00BDA13F /* CarListingBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969372716D95C00BDA13F /* CarListingBannerView.swift */; };
 		2CB9693A2716DDA300BDA13F /* CarListingBannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969392716DDA300BDA13F /* CarListingBannerViewModel.swift */; };
 		2CB9693E2716E5C100BDA13F /* DispatchQueue+MainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9693D2716E5C100BDA13F /* DispatchQueue+MainThread.swift */; };
+		2CB969472716E76900BDA13F /* CarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969462716E76900BDA13F /* CarServiceTests.swift */; };
 		ADC0CD50E6D2CC367027BAA2 /* Pods_CarListing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D383BA3E13AAE5AFF2DC8B /* Pods_CarListing.framework */; };
-		D09F372A5926CA00CA8E60F1 /* Pods_CarListing_CarListingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5311AF7B9C5109276DDF52C8 /* Pods_CarListing_CarListingUITests.framework */; };
 		F6DC032880DB41BC6AAEDD36 /* Pods_CarListingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B473E05BD0B8B85104A52BA /* Pods_CarListingTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		2C605ED22712A818001F028A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C605EB32712A817001F028A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C605EBA2712A817001F028A;
-			remoteInfo = CarListing;
-		};
-		2C605EDD2712A818001F028A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2C605EB32712A817001F028A /* Project object */;
 			proxyType = 1;
@@ -90,11 +89,7 @@
 		2C605ECA2712A818001F028A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C605ECC2712A818001F028A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C605ED12712A818001F028A /* CarListingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarListingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C605ED52712A818001F028A /* CarListingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingTests.swift; sourceTree = "<group>"; };
 		2C605ED72712A818001F028A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C605EDC2712A818001F028A /* CarListingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarListingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C605EE02712A818001F028A /* CarListingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingUITests.swift; sourceTree = "<group>"; };
-		2C605EE22712A818001F028A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C605EF82712B417001F028A /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		2C605EFA2712B426001F028A /* Wireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
 		2C605EFC2712B432001F028A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -128,6 +123,14 @@
 		2C829E1C2714A98800FCCC35 /* MapListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListWireframe.swift; sourceTree = "<group>"; };
 		2C829E1E2714A9CD00FCCC35 /* MapListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListModule.swift; sourceTree = "<group>"; };
 		2C829E202714A9E700FCCC35 /* MapListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListProtocols.swift; sourceTree = "<group>"; };
+		2C8C57E72716F7B0000B69BC /* MockReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReachability.swift; sourceTree = "<group>"; };
+		2C8C57E92716F896000B69BC /* NetworkManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerMock.swift; sourceTree = "<group>"; };
+		2C8C57EB2716FA3A000B69BC /* carInvalid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = carInvalid.json; sourceTree = "<group>"; };
+		2C8C57EC2716FA3A000B69BC /* carValid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = carValid.json; sourceTree = "<group>"; };
+		2C8C57EF2716FE96000B69BC /* MockMapListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapListViewController.swift; sourceTree = "<group>"; };
+		2C8C57F12716FEAD000B69BC /* MockMapListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapListInteractor.swift; sourceTree = "<group>"; };
+		2C8C57F32716FED1000B69BC /* MockMapListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapListWireframe.swift; sourceTree = "<group>"; };
+		2C8C57F627170240000B69BC /* MapListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListPresenterTests.swift; sourceTree = "<group>"; };
 		2CB9692127159BCD00BDA13F /* CarAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnotaion.swift; sourceTree = "<group>"; };
 		2CB969232715ADEF00BDA13F /* MKMapView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extensions.swift"; sourceTree = "<group>"; };
 		2CB969262715EEEF00BDA13F /* SelectedCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCarView.swift; sourceTree = "<group>"; };
@@ -140,6 +143,7 @@
 		2CB969372716D95C00BDA13F /* CarListingBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingBannerView.swift; sourceTree = "<group>"; };
 		2CB969392716DDA300BDA13F /* CarListingBannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingBannerViewModel.swift; sourceTree = "<group>"; };
 		2CB9693D2716E5C100BDA13F /* DispatchQueue+MainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+MainThread.swift"; sourceTree = "<group>"; };
+		2CB969462716E76900BDA13F /* CarServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceTests.swift; sourceTree = "<group>"; };
 		5311AF7B9C5109276DDF52C8 /* Pods_CarListing_CarListingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarListing_CarListingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1AE97462E2B9B289F52D3C /* Pods-CarListing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarListing.release.xcconfig"; path = "Target Support Files/Pods-CarListing/Pods-CarListing.release.xcconfig"; sourceTree = "<group>"; };
 		7B473E05BD0B8B85104A52BA /* Pods_CarListingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarListingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,14 +170,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C605ED92712A818001F028A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D09F372A5926CA00CA8E60F1 /* Pods_CarListing_CarListingUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -192,7 +188,6 @@
 			children = (
 				2C605EBD2712A817001F028A /* CarListing */,
 				2C605ED42712A818001F028A /* CarListingTests */,
-				2C605EDF2712A818001F028A /* CarListingUITests */,
 				2C605EBC2712A817001F028A /* Products */,
 				8A2F0CC8CB619739D0D40A83 /* Pods */,
 				0D3A3774B83E351C591A6C72 /* Frameworks */,
@@ -204,7 +199,6 @@
 			children = (
 				2C605EBB2712A817001F028A /* CarListing.app */,
 				2C605ED12712A818001F028A /* CarListingTests.xctest */,
-				2C605EDC2712A818001F028A /* CarListingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,19 +224,13 @@
 		2C605ED42712A818001F028A /* CarListingTests */ = {
 			isa = PBXGroup;
 			children = (
-				2C605ED52712A818001F028A /* CarListingTests.swift */,
+				2CB9693F2716E69E00BDA13F /* Mocks */,
+				2CB969402716E6A400BDA13F /* Service Tests */,
+				2C8C57F527170229000B69BC /* Presenter Tests */,
+				2CB969412716E6B200BDA13F /* Module Tests */,
 				2C605ED72712A818001F028A /* Info.plist */,
 			);
 			path = CarListingTests;
-			sourceTree = "<group>";
-		};
-		2C605EDF2712A818001F028A /* CarListingUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2C605EE02712A818001F028A /* CarListingUITests.swift */,
-				2C605EE22712A818001F028A /* Info.plist */,
-			);
-			path = CarListingUITests;
 			sourceTree = "<group>";
 		};
 		2C605EF32712AEA2001F028A /* Base */ = {
@@ -354,6 +342,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2C8C57F527170229000B69BC /* Presenter Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C57F627170240000B69BC /* MapListPresenterTests.swift */,
+			);
+			path = "Presenter Tests";
+			sourceTree = "<group>";
+		};
 		2CB969252715E88100BDA13F /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +366,67 @@
 				2CB96930271686E300BDA13F /* SelectedCarViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2CB9693F2716E69E00BDA13F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2CB969442716E72B00BDA13F /* Map List */,
+				2CB969452716E73000BDA13F /* Car List */,
+				2CB969432716E71B00BDA13F /* Test Json */,
+				2CB969422716E71400BDA13F /* Common */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		2CB969402716E6A400BDA13F /* Service Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2CB969462716E76900BDA13F /* CarServiceTests.swift */,
+			);
+			path = "Service Tests";
+			sourceTree = "<group>";
+		};
+		2CB969412716E6B200BDA13F /* Module Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Module Tests";
+			sourceTree = "<group>";
+		};
+		2CB969422716E71400BDA13F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C57E72716F7B0000B69BC /* MockReachability.swift */,
+				2C8C57E92716F896000B69BC /* NetworkManagerMock.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2CB969432716E71B00BDA13F /* Test Json */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C57EB2716FA3A000B69BC /* carInvalid.json */,
+				2C8C57EC2716FA3A000B69BC /* carValid.json */,
+			);
+			path = "Test Json";
+			sourceTree = "<group>";
+		};
+		2CB969442716E72B00BDA13F /* Map List */ = {
+			isa = PBXGroup;
+			children = (
+				2C8C57EF2716FE96000B69BC /* MockMapListViewController.swift */,
+				2C8C57F12716FEAD000B69BC /* MockMapListInteractor.swift */,
+				2C8C57F32716FED1000B69BC /* MockMapListWireframe.swift */,
+			);
+			path = "Map List";
+			sourceTree = "<group>";
+		};
+		2CB969452716E73000BDA13F /* Car List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Car List";
 			sourceTree = "<group>";
 		};
 		8A2F0CC8CB619739D0D40A83 /* Pods */ = {
@@ -426,26 +483,6 @@
 			productReference = 2C605ED12712A818001F028A /* CarListingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2C605EDB2712A818001F028A /* CarListingUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2C605EEB2712A818001F028A /* Build configuration list for PBXNativeTarget "CarListingUITests" */;
-			buildPhases = (
-				398CA103B08786C41E8B6A50 /* [CP] Check Pods Manifest.lock */,
-				2C605ED82712A818001F028A /* Sources */,
-				2C605ED92712A818001F028A /* Frameworks */,
-				2C605EDA2712A818001F028A /* Resources */,
-				F2338B1B00E5DC43014B02D8 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2C605EDE2712A818001F028A /* PBXTargetDependency */,
-			);
-			name = CarListingUITests;
-			productName = CarListingUITests;
-			productReference = 2C605EDC2712A818001F028A /* CarListingUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -459,10 +496,6 @@
 						CreatedOnToolsVersion = 12.5;
 					};
 					2C605ED02712A818001F028A = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = 2C605EBA2712A817001F028A;
-					};
-					2C605EDB2712A818001F028A = {
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = 2C605EBA2712A817001F028A;
 					};
@@ -483,7 +516,6 @@
 			targets = (
 				2C605EBA2712A817001F028A /* CarListing */,
 				2C605ED02712A818001F028A /* CarListingTests */,
-				2C605EDB2712A818001F028A /* CarListingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -502,13 +534,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C605EDA2712A818001F028A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				2C8C57ED2716FA3A000B69BC /* carInvalid.json in Resources */,
+				2C8C57EE2716FA3A000B69BC /* carValid.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,28 +558,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CarListing-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		398CA103B08786C41E8B6A50 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CarListing-CarListingUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -596,23 +601,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F2338B1B00E5DC43014B02D8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CarListing-CarListingUITests/Pods-CarListing-CarListingUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CarListing-CarListingUITests/Pods-CarListing-CarListingUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarListing-CarListingUITests/Pods-CarListing-CarListingUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -676,15 +664,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C605ED62712A818001F028A /* CarListingTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C605ED82712A818001F028A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C605EE12712A818001F028A /* CarListingUITests.swift in Sources */,
+				2C8C57E82716F7B0000B69BC /* MockReachability.swift in Sources */,
+				2C8C57F02716FE96000B69BC /* MockMapListViewController.swift in Sources */,
+				2C8C57F22716FEAD000B69BC /* MockMapListInteractor.swift in Sources */,
+				2CB969472716E76900BDA13F /* CarServiceTests.swift in Sources */,
+				2C8C57F727170240000B69BC /* MapListPresenterTests.swift in Sources */,
+				2C8C57EA2716F896000B69BC /* NetworkManagerMock.swift in Sources */,
+				2C8C57F42716FED1000B69BC /* MockMapListWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,11 +681,6 @@
 			isa = PBXTargetDependency;
 			target = 2C605EBA2712A817001F028A /* CarListing */;
 			targetProxy = 2C605ED22712A818001F028A /* PBXContainerItemProxy */;
-		};
-		2C605EDE2712A818001F028A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2C605EBA2712A817001F028A /* CarListing */;
-			targetProxy = 2C605EDD2712A818001F028A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -917,48 +898,6 @@
 			};
 			name = Release;
 		};
-		2C605EEC2712A818001F028A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BB47853352EB3981259F6BC /* Pods-CarListing-CarListingUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B4G4Y5F4Y2;
-				INFOPLIST_FILE = CarListingUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.assignment.car.CarListingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CarListing;
-			};
-			name = Debug;
-		};
-		2C605EED2712A818001F028A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B9418A700DB84EAEBDC73FF /* Pods-CarListing-CarListingUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B4G4Y5F4Y2;
-				INFOPLIST_FILE = CarListingUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.assignment.car.CarListingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CarListing;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -985,15 +924,6 @@
 			buildConfigurations = (
 				2C605EE92712A818001F028A /* Debug */,
 				2C605EEA2712A818001F028A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2C605EEB2712A818001F028A /* Build configuration list for PBXNativeTarget "CarListingUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2C605EEC2712A818001F028A /* Debug */,
-				2C605EED2712A818001F028A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
