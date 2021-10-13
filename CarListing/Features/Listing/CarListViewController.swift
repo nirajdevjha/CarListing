@@ -14,7 +14,7 @@ class CarListViewController: UIViewController {
     private lazy var closeButton: UIBarButtonItem = {
         let button: UIButton = .init(type: .custom)
         button.addTarget(self, action: #selector(didTapCloseButton), for: .touchUpInside)
-        button.setImage(UIImage(named: "close"), for: .normal)
+        button.setImage(UIImage(asset: .close), for: .normal)
         let barButton = UIBarButtonItem(customView: button)
         return barButton
     }()

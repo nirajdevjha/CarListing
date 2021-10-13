@@ -77,8 +77,8 @@ final class SelectedCarView: BaseView {
         super.setupViews()
         backgroundColor = .white
         tag = 999
-        addShadow()
         cornerRadius = 10
+        addShadow()
         
         addSubviews(
             contentStackView,

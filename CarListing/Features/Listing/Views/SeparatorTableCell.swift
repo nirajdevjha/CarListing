@@ -8,6 +8,7 @@
 import UIKit
 
 final class SeparatorTableCell: BaseTableCell {
+
     private let separatorView: UIView = {
         let view = UIView(frame: .zero).disableAutoResize()
         view.backgroundColor = UIColor.separatorColor

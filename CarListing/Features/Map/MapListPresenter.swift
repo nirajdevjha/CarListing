@@ -87,7 +87,7 @@ extension MapListPresenter: MapListPresenterProtocol {
             let carInfoList: [CarInfoViewData] = [
                 CarInfoViewModel(icon: .fuel, title: fuelText),
                 CarInfoViewModel(icon: .color, title: selectedCar.color.replacingOccurrences(of: "_", with: " ", options: .literal, range: nil).capitalized),
-                CarInfoViewModel(icon: .cleanliness, title: selectedCar.innerCleanliness.cleanlinessText)
+                CarInfoViewModel(icon: .cleanliness, title: selectedCar.innerCleanliness.cleanlinessText ?? "")
             ]
 
             let selectedCarData = SelectedCarViewModel(nameMake: "\(selectedCar.name) from \(selectedCar.make)", license: selectedCar.licensePlate, carImageUrl: selectedCar.carImageUrl, infoList: carInfoList)

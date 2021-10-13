@@ -8,7 +8,7 @@
 import Foundation
 
 class CarListInteractor: CarListInteractorProtocol {
-    let carList: CarList
+    private let carList: CarList
 
     init(carList: CarList) {
         self.carList = carList

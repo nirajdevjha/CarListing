@@ -12,7 +12,6 @@ protocol CarInfoViewData {
     var title: String { get }
 }
 
-
 final class CarInfoView: BaseView {
 
     private let iconImageView: UIImageView = {

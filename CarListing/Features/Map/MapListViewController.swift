@@ -118,6 +118,15 @@ extension MapListViewController: MKMapViewDelegate {
               let data = presenter?.getSelectedCarData(carAnnotation: carAnnotation) else {
             return
         }
+        if let view = view as? MKMarkerAnnotationView {
+            view.markerTintColor = .selectedMarkerColor
+        }
         addSelectedCarView(data: data)
+    }
+
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        guard let view = view as? MKMarkerAnnotationView else { return }
+        view.markerTintColor = .black
+        removeExistingSelectedCarViewIfAny()
     }
 }

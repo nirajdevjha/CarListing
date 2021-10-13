@@ -28,8 +28,19 @@ enum InnerCleanliness: String, Codable {
     case clean = "CLEAN"
     case regular = "REGULAR"
     case veryClean = "VERY_CLEAN"
+    case unknown
 
-    var cleanlinessText: String {
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let cleanliness = try container.decode(String.self)
+        if let value = InnerCleanliness(rawValue: cleanliness) {
+            self = value
+        } else {
+            self = .unknown
+        }
+    }
+
+    var cleanlinessText: String? {
         switch self {
         case .clean:
             return "Good"
@@ -37,6 +48,8 @@ enum InnerCleanliness: String, Codable {
             return "Excellent"
         case .regular:
             return "Average"
+        case .unknown:
+            return nil
         }
     }
 }

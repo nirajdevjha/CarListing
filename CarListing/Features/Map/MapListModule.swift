@@ -18,7 +18,6 @@ final class MapListModule: ModuleLaunchable {
         let networkManager = NetworkManager()
         let service = CarService(networkManager: networkManager)
 
-
         let interactor: MapListInteractorProtocol = MapListInteractor(
             reachability: depedencies.reachability,
             service: service

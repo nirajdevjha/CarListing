@@ -14,7 +14,8 @@ final class CarListModule: ModuleLaunchable {
     init(
         depedencies: Dependencies,
         router: RouterType,
-        carList: CarList) throws {
+        carList: CarList
+    ) throws {
 
         let controller = CarListViewController()
 

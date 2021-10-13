@@ -25,9 +25,7 @@ protocol MapListInteractorProtocol: AnyObject, InteractorType {
     func fetchCarList(success: @escaping ((CarList) -> Void), failure: @escaping ((APIError) -> Void))
 }
 
-protocol MapListInteractorOutputProtocol: AnyObject {
-
-}
+protocol MapListInteractorOutputProtocol: AnyObject { }
 
 protocol MapListWireframeProtocol: WireframeType {
     func showBannerView(from parentView: UIViewController, bannerData: CarListingBannerViewData)

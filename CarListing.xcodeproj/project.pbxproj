@@ -262,8 +262,8 @@
 		2C605EF42712B2E1001F028A /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				2C605F042712B8B5001F028A /* Reachability.swift */,
 				2CB9692D2716848100BDA13F /* CarListingAssets.swift */,
+				2C605F042712B8B5001F028A /* Reachability.swift */,
 				2CB969372716D95C00BDA13F /* CarListingBannerView.swift */,
 				2CB969392716DDA300BDA13F /* CarListingBannerViewModel.swift */,
 			);
@@ -282,9 +282,9 @@
 		2C605EF62712B2EE001F028A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2C605F022712B6EC001F028A /* UIColor+Extensions.swift */,
 				2C605F2427130E49001F028A /* UIView+Extensions.swift */,
 				2C605F302713F696001F028A /* Collection+Extensions.swift */,
+				2C605F022712B6EC001F028A /* UIColor+Extensions.swift */,
 				2CB969232715ADEF00BDA13F /* MKMapView+Extensions.swift */,
 				2CB969342716B98D00BDA13F /* Float+Extensions.swift */,
 				2CB9693D2716E5C100BDA13F /* DispatchQueue+MainThread.swift */,
@@ -317,8 +317,8 @@
 		2C605F172712E236001F028A /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				2CB9692F271686BC00BDA13F /* ViewModels */,
 				2CB969252715E88100BDA13F /* Views */,
+				2CB9692F271686BC00BDA13F /* ViewModels */,
 				2C829E1E2714A9CD00FCCC35 /* MapListModule.swift */,
 				2C829E202714A9E700FCCC35 /* MapListProtocols.swift */,
 				2C829E162714A95E00FCCC35 /* MapListViewController.swift */,
@@ -384,10 +384,10 @@
 		2CB9693F2716E69E00BDA13F /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				2CB969422716E71400BDA13F /* Common */,
 				2CB969442716E72B00BDA13F /* Map List */,
 				2CB969452716E73000BDA13F /* Car List */,
 				2CB969432716E71B00BDA13F /* Test Json */,
-				2CB969422716E71400BDA13F /* Common */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -421,8 +421,8 @@
 		2CB969432716E71B00BDA13F /* Test Json */ = {
 			isa = PBXGroup;
 			children = (
-				2C8C57EB2716FA3A000B69BC /* carInvalid.json */,
 				2C8C57EC2716FA3A000B69BC /* carValid.json */,
+				2C8C57EB2716FA3A000B69BC /* carInvalid.json */,
 			);
 			path = "Test Json";
 			sourceTree = "<group>";
