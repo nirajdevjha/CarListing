@@ -20,5 +20,4 @@ class MockMapListWireframe: MapListWireframeProtocol {
     func showBannerView(from parentView: UIViewController, bannerData: CarListingBannerViewData) {
         isBannerViewShown.timesCalled += 1
     }
-
 }

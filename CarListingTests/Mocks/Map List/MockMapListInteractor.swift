@@ -22,6 +22,5 @@ class MockMapListInteractor: MapListInteractorProtocol {
         } else {
             failure(.noResponseData)
         }
-
     }
 }
