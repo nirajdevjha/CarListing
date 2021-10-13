@@ -55,6 +55,9 @@
 		2CB96931271686E300BDA13F /* SelectedCarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB96930271686E300BDA13F /* SelectedCarViewModel.swift */; };
 		2CB969332716922900BDA13F /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969322716922900BDA13F /* FloatingButtonView.swift */; };
 		2CB969352716B98D00BDA13F /* Float+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969342716B98D00BDA13F /* Float+Extensions.swift */; };
+		2CB969382716D95C00BDA13F /* CarListingBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969372716D95C00BDA13F /* CarListingBannerView.swift */; };
+		2CB9693A2716DDA300BDA13F /* CarListingBannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969392716DDA300BDA13F /* CarListingBannerViewModel.swift */; };
+		2CB9693E2716E5C100BDA13F /* DispatchQueue+MainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9693D2716E5C100BDA13F /* DispatchQueue+MainThread.swift */; };
 		ADC0CD50E6D2CC367027BAA2 /* Pods_CarListing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D383BA3E13AAE5AFF2DC8B /* Pods_CarListing.framework */; };
 		D09F372A5926CA00CA8E60F1 /* Pods_CarListing_CarListingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5311AF7B9C5109276DDF52C8 /* Pods_CarListing_CarListingUITests.framework */; };
 		F6DC032880DB41BC6AAEDD36 /* Pods_CarListingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B473E05BD0B8B85104A52BA /* Pods_CarListingTests.framework */; };
@@ -134,6 +137,9 @@
 		2CB96930271686E300BDA13F /* SelectedCarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCarViewModel.swift; sourceTree = "<group>"; };
 		2CB969322716922900BDA13F /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
 		2CB969342716B98D00BDA13F /* Float+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Extensions.swift"; sourceTree = "<group>"; };
+		2CB969372716D95C00BDA13F /* CarListingBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingBannerView.swift; sourceTree = "<group>"; };
+		2CB969392716DDA300BDA13F /* CarListingBannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListingBannerViewModel.swift; sourceTree = "<group>"; };
+		2CB9693D2716E5C100BDA13F /* DispatchQueue+MainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+MainThread.swift"; sourceTree = "<group>"; };
 		5311AF7B9C5109276DDF52C8 /* Pods_CarListing_CarListingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarListing_CarListingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1AE97462E2B9B289F52D3C /* Pods-CarListing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarListing.release.xcconfig"; path = "Target Support Files/Pods-CarListing/Pods-CarListing.release.xcconfig"; sourceTree = "<group>"; };
 		7B473E05BD0B8B85104A52BA /* Pods_CarListingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarListingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +264,8 @@
 			children = (
 				2C605F042712B8B5001F028A /* Reachability.swift */,
 				2CB9692D2716848100BDA13F /* CarListingAssets.swift */,
+				2CB969372716D95C00BDA13F /* CarListingBannerView.swift */,
+				2CB969392716DDA300BDA13F /* CarListingBannerViewModel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -279,6 +287,7 @@
 				2C605F302713F696001F028A /* Collection+Extensions.swift */,
 				2CB969232715ADEF00BDA13F /* MKMapView+Extensions.swift */,
 				2CB969342716B98D00BDA13F /* Float+Extensions.swift */,
+				2CB9693D2716E5C100BDA13F /* DispatchQueue+MainThread.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -635,6 +644,7 @@
 				2C605F2127130A41001F028A /* CarListInteractor.swift in Sources */,
 				2C605F1D27130A18001F028A /* CarListModule.swift in Sources */,
 				2C829E212714A9E700FCCC35 /* MapListProtocols.swift in Sources */,
+				2CB9693A2716DDA300BDA13F /* CarListingBannerViewModel.swift in Sources */,
 				2C605F0F2712BB64001F028A /* APIEndPoint.swift in Sources */,
 				2C605F2527130E49001F028A /* UIView+Extensions.swift in Sources */,
 				2C605F162712C498001F028A /* CarResponseModel.swift in Sources */,
@@ -649,6 +659,7 @@
 				2C605F2F2713F329001F028A /* CarCellViewModels.swift in Sources */,
 				2CB9692E2716848100BDA13F /* CarListingAssets.swift in Sources */,
 				2C605EBF2712A817001F028A /* AppDelegate.swift in Sources */,
+				2CB9693E2716E5C100BDA13F /* DispatchQueue+MainThread.swift in Sources */,
 				2C605F092712BB3B001F028A /* NetworkingProtocols.swift in Sources */,
 				2C605EFD2712B432001F028A /* Router.swift in Sources */,
 				2CB96931271686E300BDA13F /* SelectedCarViewModel.swift in Sources */,
@@ -656,6 +667,7 @@
 				2C605F1B27130A01001F028A /* CarListViewController.swift in Sources */,
 				2CB9692227159BCD00BDA13F /* CarAnnotaion.swift in Sources */,
 				2CB969272715EEEF00BDA13F /* SelectedCarView.swift in Sources */,
+				2CB969382716D95C00BDA13F /* CarListingBannerView.swift in Sources */,
 				2C605EC12712A817001F028A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

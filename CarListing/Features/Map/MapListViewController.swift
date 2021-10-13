@@ -61,10 +61,10 @@ class MapListViewController: UIViewController {
             selectedCarView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             selectedCarView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         ])
-        selectedCarView.configureView(model: data)
+        selectedCarView.configureView(delegate: self, model: data)
     }
 
-    private func removeExistingSelectedCarViewIfAny(){
+    private func removeExistingSelectedCarViewIfAny() {
         if let existingView = view.viewWithTag(999) {
             existingView.removeFromSuperview()
         }
@@ -78,7 +78,19 @@ class MapListViewController: UIViewController {
     }
 }
 
+extension MapListViewController: SelectedCarViewDelegate {
+    func selectedCarViewDismissed() {
+        mapView.selectedAnnotations.forEach({ mapView.deselectAnnotation($0, animated: false) })
+    }
+}
+
 extension MapListViewController: MapListViewProtocol {
+    func showListingFloatingButton(isHidden: Bool) {
+        DispatchQueue.dispatchToMainThreadIfRequired {
+            self.listingFloatingView.isHidden = isHidden
+        }
+    }
+
     func setInitialLocationOnMap(initialLocation: CLLocation, regionRadius: CLLocationDistance) {
         mapView.setInitialLocation(with: initialLocation, regionRadius: regionRadius)
     }
@@ -93,12 +105,18 @@ extension MapListViewController: MapListViewProtocol {
 }
 
 extension MapListViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "carMarker")
+        annotationView.glyphImage = UIImage(asset: .carMarker)
+        annotationView.markerTintColor = .black
+        return annotationView
+    }
+
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        guard let carAnnotation = view.annotation as? CarAnnotaion else {
+        guard let carAnnotation = view.annotation as? CarAnnotaion,
+              let data = presenter?.getSelectedCarData(carAnnotation: carAnnotation) else {
             return
         }
-        if let data = presenter?.getSelectedCarData(carAnnotation: carAnnotation) {
-            addSelectedCarView(data: data)
-        }
+        addSelectedCarView(data: data)
     }
 }

@@ -15,6 +15,7 @@ enum CarListingAssets: String {
     case fuel
     case color
     case list
+    case carMarker = "car_marker"
 }
 
 extension UIImage {

@@ -32,9 +32,10 @@ final class CarInfoView: BaseView {
 
     private let titleLabel: UILabel = {
         let label = UILabel(frame: .zero).disableAutoResize()
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = .darkGrayTxtColor
         label.textAlignment = .center
+        label.numberOfLines = 2
         return label
     }()
 

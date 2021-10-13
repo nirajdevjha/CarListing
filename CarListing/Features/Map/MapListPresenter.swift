@@ -15,6 +15,11 @@ class MapListPresenter {
     private weak var view: MapListViewProtocol?
     private var carList: CarList = []
 
+    private enum Constants {
+        static let errorMessage = "Unable to fetch the cars"
+        static let noInternetMessage = "You seem to be offline"
+    }
+
     init(
         interactor: MapListInteractorProtocol,
         view: MapListViewProtocol,
@@ -26,19 +31,29 @@ class MapListPresenter {
     }
 
     private func fetchCarList() {
+        guard let view = view else { return }
+        if !interactor.isConnectToInternet() {
+            let bannerData = CarListingBannerViewModel(message: Constants.noInternetMessage, bgColor: UIColor.errorBannerBgColor)
+            view.showListingFloatingButton(isHidden: true)
+            self.wireframe.showBannerView(from: view, bannerData: bannerData)
+            return
+        }
+
         interactor.fetchCarList { [weak self] carList in
             guard let self = self else { return }
             self.carList = carList
             self.createMapMarkers()
         } failure: { [weak self] error in
-            //TODO: handle error
+            guard let self = self else { return }
+            let bannerData = CarListingBannerViewModel(message: Constants.errorMessage, bgColor: UIColor.errorBannerBgColor)
+            self.wireframe.showBannerView(from: view, bannerData: bannerData)
         }
     }
 
     func createMapMarkers() {
         var carAnnotations: [CarAnnotaion] = []
         for car in carList {
-            let carAnnotation = CarAnnotaion(id: car.id, title: "Car", coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude))
+            let carAnnotation = CarAnnotaion(id: car.id, title: car.name, coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude))
             carAnnotations.append(carAnnotation)
         }
         view?.markCarsOnMap(carLocations: carAnnotations)
@@ -64,12 +79,11 @@ extension MapListPresenter: MapListPresenterProtocol {
         let selectedCar = carList.first { car in
             car.id == carAnnotation.id
         }
-
         if let selectedCar = selectedCar {
             let fuelText = "\((selectedCar.fuelLevel * 100).cleanValue) %"
             let carInfoList: [CarInfoViewData] = [
                 CarInfoViewModel(icon: .fuel, title: fuelText),
-                CarInfoViewModel(icon: .color, title: selectedCar.color),
+                CarInfoViewModel(icon: .color, title: selectedCar.color.replacingOccurrences(of: "_", with: " ", options: .literal, range: nil).capitalized),
                 CarInfoViewModel(icon: .cleanliness, title: selectedCar.innerCleanliness.cleanlinessText)
             ]
 

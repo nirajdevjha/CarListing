@@ -5,7 +5,7 @@
 //  Created by Niraj Kumar Jha on 11/10/21.
 //
 
-import Foundation
+import UIKit
 
 final class MapListWireframe: MapListWireframeProtocol {
 
@@ -13,5 +13,9 @@ final class MapListWireframe: MapListWireframeProtocol {
 
     init(router: RouterType) {
         self.router = router
+    }
+
+    func showBannerView(from parentView: UIViewController, bannerData: CarListingBannerViewData) {
+        CarListingBannerView.showBannerView(from: parentView.view, bannerData: bannerData)
     }
 }

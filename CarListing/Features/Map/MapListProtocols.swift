@@ -17,6 +17,7 @@ protocol MapListPresenterProtocol: AnyObject {
 protocol MapListViewProtocol where Self: UIViewController {
     func setInitialLocationOnMap(initialLocation: CLLocation, regionRadius: CLLocationDistance)
     func markCarsOnMap(carLocations: [CarAnnotaion])
+    func showListingFloatingButton(isHidden: Bool)
 }
 
 protocol MapListInteractorProtocol: AnyObject, InteractorType {
@@ -29,5 +30,5 @@ protocol MapListInteractorOutputProtocol: AnyObject {
 }
 
 protocol MapListWireframeProtocol: WireframeType {
-
+    func showBannerView(from parentView: UIViewController, bannerData: CarListingBannerViewData)
 }

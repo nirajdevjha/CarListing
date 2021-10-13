@@ -8,6 +8,9 @@
 import UIKit
 import SDWebImage
 
+protocol SelectedCarViewDelegate: AnyObject {
+    func selectedCarViewDismissed()
+}
 
 protocol SelectedCarViewData {
     var nameMake: String { get }
@@ -59,7 +62,7 @@ final class SelectedCarView: BaseView {
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
-        stackView.spacing = 8
+        stackView.spacing = 4
         return stackView
     }()
 
@@ -67,6 +70,8 @@ final class SelectedCarView: BaseView {
         let view = CarInfoView(frame: .zero).disableAutoResize()
         return view
     }()
+
+    private weak var delegate: SelectedCarViewDelegate?
 
     override func setupViews() {
         super.setupViews()
@@ -111,9 +116,11 @@ final class SelectedCarView: BaseView {
     @objc
     private func didTapCloseButton() {
         removeFromSuperview()
+        delegate?.selectedCarViewDismissed()
     }
 
-    func configureView(model: SelectedCarViewData) {
+    func configureView(delegate: SelectedCarViewDelegate?, model: SelectedCarViewData) {
+        self.delegate = delegate
         nameMakeLabel.text = model.nameMake
         licensePlateLabel.text = model.license
 
