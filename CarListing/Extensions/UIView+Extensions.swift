@@ -26,6 +26,19 @@ extension UIView {
             self.layer.masksToBounds = newRadius > 0
         }
     }
+
+    func addShadow(
+        opacity: Float = 0.2,
+        offset: CGSize = CGSize(width: 0, height: 1)
+    ) {
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = offset
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowRadius = 2.0
+        self.layer.shouldRasterize = true
+        self.layer.rasterizationScale = UIScreen.main.scale
+    }
 }
 
 extension UIStackView {

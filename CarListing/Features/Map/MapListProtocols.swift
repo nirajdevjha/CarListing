@@ -11,6 +11,7 @@ import MapKit
 protocol MapListPresenterProtocol: AnyObject {
     func viewDidLoad()
     func openCarListing()
+    func getSelectedCarData(carAnnotation: CarAnnotaion) -> SelectedCarViewData?
 }
 
 protocol MapListViewProtocol where Self: UIViewController {

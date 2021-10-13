@@ -15,9 +15,28 @@ struct Car: Decodable {
     let modelName: String
     let name: String
     let make: String
-    let fuelLevel: Double
+    let fuelLevel: Float
     let licensePlate: String
     let latitude: Double
     let longitude: Double
     let carImageUrl: String?
+    let color: String
+    let innerCleanliness: InnerCleanliness
+}
+
+enum InnerCleanliness: String, Codable {
+    case clean = "CLEAN"
+    case regular = "REGULAR"
+    case veryClean = "VERY_CLEAN"
+
+    var cleanlinessText: String {
+        switch self {
+        case .clean:
+            return "Good"
+        case .veryClean:
+            return "Excellent"
+        case .regular:
+            return "Average"
+        }
+    }
 }

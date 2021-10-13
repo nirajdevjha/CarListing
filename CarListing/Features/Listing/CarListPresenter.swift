@@ -30,7 +30,7 @@ class CarListPresenter {
         let carList = interactor.getCarList()
         for (idx, car) in carList.enumerated() {
             let nameMakeText = "\(car.name) | \(car.make)"
-            let fuelText = "Fuel: \(car.fuelLevel * 100) %"
+            let fuelText = "Fuel: \((car.fuelLevel * 100).cleanValue) %"
             let carCellViewModel = CarInfoCellViewModel(rowType: .info, carImage: car.carImageUrl, nameMake: nameMakeText, licensePlate: car.licensePlate, fuelText: fuelText)
             carCellViewModels.append(carCellViewModel)
             if idx != carList.count - 1 {

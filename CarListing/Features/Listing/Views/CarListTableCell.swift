@@ -10,7 +10,7 @@ import SDWebImage
 
 final class CarListTableCell: BaseTableCell {
 
-    private lazy var carImageView: UIImageView = {
+    private let carImageView: UIImageView = {
         let imageView = UIImageView().disableAutoResize()
         imageView.contentMode = .scaleAspectFill
         return imageView
@@ -85,9 +85,11 @@ extension CarListTableCell {
         fuelLabel.text = model.fuelText
         if let carImageUrlString = model.carImage,
            let carImageUrl = URL(string: carImageUrlString) {
-            carImageView.sd_setImage(with: carImageUrl , placeholderImage: UIImage(named: "car_default"), options: .retryFailed)
+            carImageView.sd_setImage(with: carImageUrl,
+                                     placeholderImage: UIImage(asset: .carFallbackImage),
+                                     options: .retryFailed)
         } else {
-            carImageView.image = UIImage(named: "car_default")
+            carImageView.image = UIImage(asset: .carFallbackImage)
         }
     }
 }

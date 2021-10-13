@@ -38,7 +38,7 @@ class MapListPresenter {
     func createMapMarkers() {
         var carAnnotations: [CarAnnotaion] = []
         for car in carList {
-            let carAnnotation = CarAnnotaion(title: "Car", coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude))
+            let carAnnotation = CarAnnotaion(id: car.id, title: "Car", coordinate: CLLocationCoordinate2D(latitude: car.latitude, longitude: car.longitude))
             carAnnotations.append(carAnnotation)
         }
         view?.markCarsOnMap(carLocations: carAnnotations)
@@ -57,6 +57,26 @@ extension MapListPresenter: MapListPresenterProtocol {
     func openCarListing() {
         guard let sourceView = view else { return }
         wireframe.router.present(module: Module.carList(carList: carList), sourceView: sourceView, in: nil, animated: true)
+    }
+
+    func getSelectedCarData(carAnnotation: CarAnnotaion) -> SelectedCarViewData? {
+
+        let selectedCar = carList.first { car in
+            car.id == carAnnotation.id
+        }
+
+        if let selectedCar = selectedCar {
+            let fuelText = "\((selectedCar.fuelLevel * 100).cleanValue) %"
+            let carInfoList: [CarInfoViewData] = [
+                CarInfoViewModel(icon: .fuel, title: fuelText),
+                CarInfoViewModel(icon: .color, title: selectedCar.color),
+                CarInfoViewModel(icon: .cleanliness, title: selectedCar.innerCleanliness.cleanlinessText)
+            ]
+
+            let selectedCarData = SelectedCarViewModel(nameMake: "\(selectedCar.name) from \(selectedCar.make)", license: selectedCar.licensePlate, carImageUrl: selectedCar.carImageUrl, infoList: carInfoList)
+            return selectedCarData
+        }
+        return nil
     }
 }
 

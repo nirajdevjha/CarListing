@@ -11,12 +11,9 @@ import MapKit
 class MapListViewController: UIViewController {
     var presenter: MapListPresenterProtocol?
 
-    private let listingFloatingButton: UIButton = {
-        let button = UIButton().disableAutoResize()
-        button.addTarget(self, action: #selector(didTapListingFloatingButton), for: .touchUpInside)
-        button.setTitle("List", for: .normal)
-        button.backgroundColor = .black
-        return button
+    private let listingFloatingView: FloatingButtonView = {
+        let view = FloatingButtonView().disableAutoResize()
+        return view
     }()
 
     private let mapView: MKMapView = {
@@ -27,13 +24,14 @@ class MapListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        mapView.delegate = self
         setupViews()
         presenter?.viewDidLoad()
     }
 
     private func setupViews() {
         view.addSubview(mapView)
-        view.addSubview(listingFloatingButton)
+        view.addSubview(listingFloatingView)
 
         NSLayoutConstraint.activate([
             mapView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -43,16 +41,40 @@ class MapListViewController: UIViewController {
         ])
 
         NSLayoutConstraint.activate([
-            listingFloatingButton.widthAnchor.constraint(equalToConstant: 50),
-            listingFloatingButton.heightAnchor.constraint(equalTo: listingFloatingButton.widthAnchor),
-            listingFloatingButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
-            listingFloatingButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            listingFloatingView.widthAnchor.constraint(equalToConstant: 40),
+            listingFloatingView.heightAnchor.constraint(equalTo: listingFloatingView.widthAnchor),
+            listingFloatingView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 100),
+            listingFloatingView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
         ])
+        listingFloatingView.cornerRadius = 20
+        listingFloatingView.addShadow()
+        floatingButtonEvent()
     }
 
-    @objc
-    private func didTapListingFloatingButton() {
-        presenter?.openCarListing()
+    private func addSelectedCarView(data: SelectedCarViewData) {
+        removeExistingSelectedCarViewIfAny()
+        let selectedCarView = SelectedCarView().disableAutoResize()
+        view.addSubview(selectedCarView)
+        selectedCarView.sizeToFit()
+        NSLayoutConstraint.activate([
+            selectedCarView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            selectedCarView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            selectedCarView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+        ])
+        selectedCarView.configureView(model: data)
+    }
+
+    private func removeExistingSelectedCarViewIfAny(){
+        if let existingView = view.viewWithTag(999) {
+            existingView.removeFromSuperview()
+        }
+    }
+
+    private func floatingButtonEvent() {
+        listingFloatingView.onFloatingButtonTap = { [weak self] in
+            guard let self = self else { return }
+            self.presenter?.openCarListing()
+        }
     }
 }
 
@@ -62,8 +84,21 @@ extension MapListViewController: MapListViewProtocol {
     }
 
     func markCarsOnMap(carLocations: [CarAnnotaion]) {
-        for carLocation in carLocations {
-            mapView.addAnnotation(carLocation)
+        DispatchQueue.main.async {
+            for carLocation in carLocations {
+                self.mapView.addAnnotation(carLocation)
+            }
+        }
+    }
+}
+
+extension MapListViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let carAnnotation = view.annotation as? CarAnnotaion else {
+            return
+        }
+        if let data = presenter?.getSelectedCarData(carAnnotation: carAnnotation) {
+            addSelectedCarView(data: data)
         }
     }
 }
