@@ -56,6 +56,8 @@
 		2C8C57FB27170CEC000B69BC /* MockCarListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C57FA27170CEC000B69BC /* MockCarListInteractor.swift */; };
 		2C8C57FD27170CF7000B69BC /* MockCarListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C57FC27170CF7000B69BC /* MockCarListWireframe.swift */; };
 		2C8C57FF27170F1A000B69BC /* CarListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C57FE27170F1A000B69BC /* CarListPresenterTests.swift */; };
+		2C8C5801271714FE000B69BC /* MapListModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C5800271714FE000B69BC /* MapListModuleTests.swift */; };
+		2C8C58032717150C000B69BC /* CarListModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C58022717150C000B69BC /* CarListModuleTests.swift */; };
 		2CB9692227159BCD00BDA13F /* CarAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9692127159BCD00BDA13F /* CarAnnotaion.swift */; };
 		2CB969242715ADEF00BDA13F /* MKMapView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969232715ADEF00BDA13F /* MKMapView+Extensions.swift */; };
 		2CB969272715EEEF00BDA13F /* SelectedCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB969262715EEEF00BDA13F /* SelectedCarView.swift */; };
@@ -139,6 +141,8 @@
 		2C8C57FA27170CEC000B69BC /* MockCarListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCarListInteractor.swift; sourceTree = "<group>"; };
 		2C8C57FC27170CF7000B69BC /* MockCarListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCarListWireframe.swift; sourceTree = "<group>"; };
 		2C8C57FE27170F1A000B69BC /* CarListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresenterTests.swift; sourceTree = "<group>"; };
+		2C8C5800271714FE000B69BC /* MapListModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListModuleTests.swift; sourceTree = "<group>"; };
+		2C8C58022717150C000B69BC /* CarListModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListModuleTests.swift; sourceTree = "<group>"; };
 		2CB9692127159BCD00BDA13F /* CarAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnotaion.swift; sourceTree = "<group>"; };
 		2CB969232715ADEF00BDA13F /* MKMapView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Extensions.swift"; sourceTree = "<group>"; };
 		2CB969262715EEEF00BDA13F /* SelectedCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCarView.swift; sourceTree = "<group>"; };
@@ -399,6 +403,8 @@
 		2CB969412716E6B200BDA13F /* Module Tests */ = {
 			isa = PBXGroup;
 			children = (
+				2C8C5800271714FE000B69BC /* MapListModuleTests.swift */,
+				2C8C58022717150C000B69BC /* CarListModuleTests.swift */,
 			);
 			path = "Module Tests";
 			sourceTree = "<group>";
@@ -682,9 +688,11 @@
 				2C8C57F22716FEAD000B69BC /* MockMapListInteractor.swift in Sources */,
 				2CB969472716E76900BDA13F /* CarServiceTests.swift in Sources */,
 				2C8C57FF27170F1A000B69BC /* CarListPresenterTests.swift in Sources */,
+				2C8C5801271714FE000B69BC /* MapListModuleTests.swift in Sources */,
 				2C8C57F727170240000B69BC /* MapListPresenterTests.swift in Sources */,
 				2C8C57F927170CD8000B69BC /* MockCarListViewController.swift in Sources */,
 				2C8C57FD27170CF7000B69BC /* MockCarListWireframe.swift in Sources */,
+				2C8C58032717150C000B69BC /* CarListModuleTests.swift in Sources */,
 				2C8C57EA2716F896000B69BC /* NetworkManagerMock.swift in Sources */,
 				2C8C57F42716FED1000B69BC /* MockMapListWireframe.swift in Sources */,
 			);
