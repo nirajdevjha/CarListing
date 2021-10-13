@@ -20,6 +20,7 @@ VIPER & MVVM
 ### Third party libraries
 
 Used [SDWebImage](https://github.com/SDWebImage/SDWebImage) for image handling.
+- The dependency is added using Cocoapods. Need pod install.
 - I chose this because its a great image downloader in async mode and also provide caching.
 
 ### Areas of improvement / Additions
