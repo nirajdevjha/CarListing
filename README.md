@@ -20,7 +20,7 @@ VIPER & MVVM
 ### Third party libraries
 
 Used [SDWebImage](https://github.com/SDWebImage/SDWebImage) for image handling.
-- I chose thi because its a great image downloader in async mode and also provide caching.
+- I chose this because its a great image downloader in async mode and also provide caching.
 
 ### Areas of improvement / Additions
 
