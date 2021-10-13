@@ -13,6 +13,7 @@ class MapListViewController: UIViewController {
 
     private lazy var listingFloatingView: FloatingButtonView = {
         let view = FloatingButtonView().disableAutoResize()
+        view.isHidden = true
         return view
     }()
 

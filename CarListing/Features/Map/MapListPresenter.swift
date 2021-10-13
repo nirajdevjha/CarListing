@@ -59,6 +59,7 @@ class MapListPresenter {
             )
             carAnnotations.append(carAnnotation)
         }
+        view?.showListingFloatingButton(isHidden: false)
         view?.markCarsOnMap(carLocations: carAnnotations)
     }
 }
