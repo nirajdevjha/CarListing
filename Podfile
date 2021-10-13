@@ -13,8 +13,4 @@ target 'CarListing' do
     # Pods for testing
   end
 
-  target 'CarListingUITests' do
-    # Pods for testing
-  end
-
 end
